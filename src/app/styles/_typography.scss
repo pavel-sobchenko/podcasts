@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+@function define-heading($number) {
+  @return mat.define-typography-level(
+      $font-family: $heading-font-family, 
+      $font-weight: 500,
+      $font-size: $number * $heading-font-size-base, 
+      $line-height: 1,
+      $letter-spacing: normal,
+  )
+}
+
+$theme-typography: mat.define-typography-config(  
+$display-4: define-heading(32),
+$display-3: mat.define-typography-level($font-family: $body-font-family, $font-weight: 700, $font-size: 4rem, $line-height: 1,),
+$display-2: mat.define-typography-level($font-family: $body-font-family, $font-weight: 700, $font-size: 3.25rem, $line-height: 1,),
+$display-1: mat.define-typography-level($font-family: $body-font-family, $font-weight: 700, $font-size: 2.75rem, $line-height: 1,),
+$headline: define-heading(10),
+$title: define-heading(9),
+$subheading-2: define-heading(8),
+$subheading-1: define-heading(6),
+$body-1: mat.define-typography-level($font-family: $body-font-family, $font-weight: 300, $font-size: 0.9rem, $line-height: 1,),
+$body-2: mat.define-typography-level($font-family: $body-font-family, $font-weight: 500, $font-size: 0.9rem, $line-height: 1,),
+$caption: mat.define-typography-level($font-family: $body-font-family, $font-weight: 400, $font-size: 0.75rem, $line-height: 1,),
+$button: mat.define-typography-level($font-family: $body-font-family, $font-weight: 500, $font-size: 1rem, $line-height: 1.5,),
+$input: mat.define-typography-level($font-family: $body-font-family, $font-weight: 400, $font-size: 0.875rem, $line-height: 1,),
+);
+
+

@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin customize() {
+    .mat-form-field {
+        background-color: #ffffff;
+        border: 1px solid black;
+        border-radius: 32px;
+        height: 42px;
+        max-width: 620px;
+        margin: 8px 0;
+
+
+        .mat-form-field-flex {
+            display: flex;
+            background-color: transparent;
+            padding: 0 1em !important;
+        }
+
+        .mat-form-field-underline {
+            display: none;
+        }
+
+        .mat-form-field-suffix {
+            cursor: pointer;
+            align-self: center;
+        }
+
+        .mat-form-field-infix {
+            border-top: 0.6em solid transparent;
+        }
+
+        &.filled,
+        &.mat-focused {
+            .mat-form-field-label-wrapper {
+                top: -0.6em;
+            }
+        }
+    }
+}
+
+@mixin theme($theme) {
+    @include customize();
+}

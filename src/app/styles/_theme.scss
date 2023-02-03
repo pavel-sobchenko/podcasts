@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+@use './components/button/button-theme' as button;
+@use './components/input/input-theme' as inputs;
+
+$light-theme: mat.define-light-theme((
+ color: (
+   primary: $theme-primary,
+   accent: $theme-secondary,
+   warn: $theme-error,
+ ),
+ density: 0,
+));
+
+@include mat.core($theme-typography);
+@include mat.all-component-themes($light-theme);
+@include button.theme($light-theme);
+@include inputs.theme($light-theme);
