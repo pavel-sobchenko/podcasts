@@ -1,32 +1,31 @@
 <div class="custom-theme">
   <div class="example-button-row">
-    <button mat-raised-button >Basic</button>
-    <button mat-raised-button  color="primary">Primary</button>
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
     <button mat-raised-button color="accent">Accent</button>
     <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button  disabled>Disabled</button>
-    <a mat-raised-button  href="https://www.google.com/" target="_blank">Link</a>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
   </div>
 
-  <mat-form-field class="example-form-field" [ngClass]="{ filled: !!value }" >
+  <mat-form-field class="example-form-field" [ngClass]="{ filled: !!value }">
     <mat-label>Clearable input</mat-label>
-    <input matInput type="text" [(ngModel)]="value">
-    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <input matInput type="text" [(ngModel)]="value" />
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
 </div>
 
-
 <h1>Top header</h1>
 
-  <!-- This paragraph will be styled as `body-1` via the `.mat-body` CSS class applied -->
-  <p class="mat-body">Introductory text</p>
+<!-- This paragraph will be styled as `body-1` via the `.mat-body` CSS class applied -->
+<p class="mat-body">Introductory text</p>
 
-  <div class="mat-typography">
-    <!-- This header will be styled as `title` because it is inside `.mat-typography` -->
-    <h2>Inner header</h2>
+<div class="mat-typography">
+  <!-- This header will be styled as `title` because it is inside `.mat-typography` -->
+  <h2>Inner header</h2>
 
-    <!-- This paragraph will be styled as `body-1` because it is inside `.mat-typography` -->
-    <p>Some inner text</p>
-  </div>
+  <!-- This paragraph will be styled as `body-1` because it is inside `.mat-typography` -->
+  <p>Some inner text</p>
+</div>

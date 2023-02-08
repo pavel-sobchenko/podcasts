@@ -10,7 +10,7 @@
   )
 }
 
-$theme-typography: mat.define-typography-config(  
+$theme-typography: mat.define-legacy-typography-config(  
 $display-4: define-heading(32),
 $display-3: mat.define-typography-level($font-family: $body-font-family, $font-weight: 700, $font-size: 4rem, $line-height: 1,),
 $display-2: mat.define-typography-level($font-family: $body-font-family, $font-weight: 700, $font-size: 3.25rem, $line-height: 1,),
