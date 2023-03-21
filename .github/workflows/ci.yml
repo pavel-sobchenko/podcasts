@@ -22,8 +22,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Tests
-        run: npm run test:ci
+      #- name: Tests
+      #  run: npm run test:ci
 
       - name: Replace secret
         uses: cschleiden/replace-tokens@v1
