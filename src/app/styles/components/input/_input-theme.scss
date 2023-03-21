@@ -2,41 +2,48 @@
 @use '@angular/material' as mat;
 
 @mixin customize() {
-    .mat-form-field {
+    .mat-mdc-form-field {
         background-color: #ffffff;
         border: 1px solid black;
         border-radius: 32px;
         height: 42px;
-        max-width: 620px;
-        margin: 8px 0;
-
-
-        .mat-form-field-flex {
-            display: flex;
-            background-color: transparent;
-            padding: 0 1em !important;
+    
+        &.selector,
+        &.autocomplete {
+          width: 300px;
+          min-width: 300px;
         }
-
-        .mat-form-field-underline {
-            display: none;
+    
+        .mat-mdc-form-field-subscript-wrapper {
+          display: none;
         }
-
-        .mat-form-field-suffix {
-            cursor: pointer;
-            align-self: center;
+    
+        .mdc-line-ripple {
+          display: none;
         }
-
-        .mat-form-field-infix {
-            border-top: 0.6em solid transparent;
+    
+        .mat-mdc-text-field-wrapper {
+          border-radius: 32px;
+          display: flex;
+          align-items: center;
         }
-
-        &.filled,
-        &.mat-focused {
-            .mat-form-field-label-wrapper {
-                top: -0.5em;
-            }
+    
+        .mat-mdc-form-field-infix {
+          padding-top: 18px !important;
         }
-    }
+    
+        .mat-mdc-form-field-focus-overlay {
+          background: transparent;
+        }
+    
+        .mat-mdc-select-arrow-wrapper {
+          transform: translateY(-2px) !important;
+        }
+    
+        .mat-mdc-select-arrow {
+          color: black;
+        }
+      }
 }
 
 @mixin theme($theme) {

@@ -13,6 +13,6 @@ $light-theme: mat.define-light-theme((
 
 @include mat.all-legacy-component-typographies($theme-typography);
 @include mat.legacy-core();
-@include mat.all-legacy-component-themes($light-theme);
+@include mat.all-component-themes($light-theme);
 @include button.theme($light-theme);
 @include inputs.theme($light-theme);
